@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Regard:</strong>
+  <%= @place_cost.regard %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @place_cost.price %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @place_cost.place %>
+</p>
+
+<%= link_to 'Edit', edit_place_cost_path(@place_cost) %> |
+<%= link_to 'Back', place_costs_path %>

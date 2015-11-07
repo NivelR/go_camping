@@ -1,0 +1,41 @@
+<%= form_for(@place_near) do |f| %>
+  <% if @place_near.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@place_near.errors.count, "error") %> prohibited this place_near from being saved:</h2>
+
+      <ul>
+      <% @place_near.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :kiosk %><br>
+    <%= f.check_box :kiosk %>
+  </div>
+  <div class="field">
+    <%= f.label :disco %><br>
+    <%= f.check_box :disco %>
+  </div>
+  <div class="field">
+    <%= f.label :beach %><br>
+    <%= f.check_box :beach %>
+  </div>
+  <div class="field">
+    <%= f.label :national_park %><br>
+    <%= f.check_box :national_park %>
+  </div>
+  <div class="field">
+    <%= f.label :other %><br>
+    <%= f.text_field :other %>
+  </div>
+  <div class="field">
+    <%= f.label :place_id %><br>
+    <%= f.text_field :place_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Place Costs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Regard</th>
+      <th>Price</th>
+      <th>Place</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @place_costs.each do |place_cost| %>
+      <tr>
+        <td><%= place_cost.regard %></td>
+        <td><%= place_cost.price %></td>
+        <td><%= place_cost.place %></td>
+        <td><%= link_to 'Show', place_cost %></td>
+        <td><%= link_to 'Edit', edit_place_cost_path(place_cost) %></td>
+        <td><%= link_to 'Destroy', place_cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Place cost', new_place_cost_path %>

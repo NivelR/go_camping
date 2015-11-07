@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :place_costs
+  resources :place_facilities
+  resources :place_services
+  resources :place_nears
+  resources :place_sports
   get 'home/index'
 
   resources :places

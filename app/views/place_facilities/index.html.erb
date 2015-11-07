@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Place Facilities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Private toilet</th>
+      <th>Private shared toilet</th>
+      <th>Hot water</th>
+      <th>Fridge</th>
+      <th>Kitchen</th>
+      <th>Microwave</th>
+      <th>Parking</th>
+      <th>Boat ramp</th>
+      <th>Barbecue area</th>
+      <th>Grill shed</th>
+      <th>Campfire place</th>
+      <th>Swimming pool</th>
+      <th>Sound system</th>
+      <th>Other</th>
+      <th>Place</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @place_facilities.each do |place_facility| %>
+      <tr>
+        <td><%= place_facility.private_toilet %></td>
+        <td><%= place_facility.private_shared_toilet %></td>
+        <td><%= place_facility.hot_water %></td>
+        <td><%= place_facility.fridge %></td>
+        <td><%= place_facility.kitchen %></td>
+        <td><%= place_facility.microwave %></td>
+        <td><%= place_facility.parking %></td>
+        <td><%= place_facility.boat_ramp %></td>
+        <td><%= place_facility.barbecue_area %></td>
+        <td><%= place_facility.grill_shed %></td>
+        <td><%= place_facility.campfire_place %></td>
+        <td><%= place_facility.swimming_pool %></td>
+        <td><%= place_facility.sound_system %></td>
+        <td><%= place_facility.other %></td>
+        <td><%= place_facility.place %></td>
+        <td><%= link_to 'Show', place_facility %></td>
+        <td><%= link_to 'Edit', edit_place_facility_path(place_facility) %></td>
+        <td><%= link_to 'Destroy', place_facility, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Place facilitie', new_place_facility_path %>

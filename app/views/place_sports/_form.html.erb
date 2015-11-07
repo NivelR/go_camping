@@ -1,0 +1,45 @@
+<%= form_for(@place_sport) do |f| %>
+  <% if @place_sport.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@place_sport.errors.count, "error") %> prohibited this place_sport from being saved:</h2>
+
+      <ul>
+      <% @place_sport.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ping_pong_table %><br>
+    <%= f.check_box :ping_pong_table %>
+  </div>
+  <div class="field">
+    <%= f.label :canoe %><br>
+    <%= f.check_box :canoe %>
+  </div>
+  <div class="field">
+    <%= f.label :soccer_field %><br>
+    <%= f.check_box :soccer_field %>
+  </div>
+  <div class="field">
+    <%= f.label :platform_tennis_court %><br>
+    <%= f.check_box :platform_tennis_court %>
+  </div>
+  <div class="field">
+    <%= f.label :volleyball_court %><br>
+    <%= f.check_box :volleyball_court %>
+  </div>
+  <div class="field">
+    <%= f.label :other %><br>
+    <%= f.text_field :other %>
+  </div>
+  <div class="field">
+    <%= f.label :place_id %><br>
+    <%= f.text_field :place_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

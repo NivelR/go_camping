@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Place Sports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ping pong table</th>
+      <th>Canoe</th>
+      <th>Soccer field</th>
+      <th>Platform tennis court</th>
+      <th>Volleyball court</th>
+      <th>Other</th>
+      <th>Place</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @place_sports.each do |place_sport| %>
+      <tr>
+        <td><%= place_sport.ping_pong_table %></td>
+        <td><%= place_sport.canoe %></td>
+        <td><%= place_sport.soccer_field %></td>
+        <td><%= place_sport.platform_tennis_court %></td>
+        <td><%= place_sport.volleyball_court %></td>
+        <td><%= place_sport.other %></td>
+        <td><%= place_sport.place %></td>
+        <td><%= link_to 'Show', place_sport %></td>
+        <td><%= link_to 'Edit', edit_place_sport_path(place_sport) %></td>
+        <td><%= link_to 'Destroy', place_sport, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Place sport', new_place_sport_path %>

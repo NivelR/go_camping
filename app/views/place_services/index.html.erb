@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Place Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dry cleaning</th>
+      <th>Public transport</th>
+      <th>Other</th>
+      <th>Place</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @place_services.each do |place_service| %>
+      <tr>
+        <td><%= place_service.dry_cleaning %></td>
+        <td><%= place_service.public_transport %></td>
+        <td><%= place_service.other %></td>
+        <td><%= place_service.place %></td>
+        <td><%= link_to 'Show', place_service %></td>
+        <td><%= link_to 'Edit', edit_place_service_path(place_service) %></td>
+        <td><%= link_to 'Destroy', place_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Place service', new_place_service_path %>

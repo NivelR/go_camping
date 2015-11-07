@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dry cleaning:</strong>
+  <%= @place_service.dry_cleaning %>
+</p>
+
+<p>
+  <strong>Public transport:</strong>
+  <%= @place_service.public_transport %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @place_service.other %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @place_service.place %>
+</p>
+
+<%= link_to 'Edit', edit_place_service_path(@place_service) %> |
+<%= link_to 'Back', place_services_path %>

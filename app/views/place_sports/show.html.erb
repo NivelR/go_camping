@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ping pong table:</strong>
+  <%= @place_sport.ping_pong_table %>
+</p>
+
+<p>
+  <strong>Canoe:</strong>
+  <%= @place_sport.canoe %>
+</p>
+
+<p>
+  <strong>Soccer field:</strong>
+  <%= @place_sport.soccer_field %>
+</p>
+
+<p>
+  <strong>Platform tennis court:</strong>
+  <%= @place_sport.platform_tennis_court %>
+</p>
+
+<p>
+  <strong>Volleyball court:</strong>
+  <%= @place_sport.volleyball_court %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @place_sport.other %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @place_sport.place %>
+</p>
+
+<%= link_to 'Edit', edit_place_sport_path(@place_sport) %> |
+<%= link_to 'Back', place_sports_path %>
