@@ -88,8 +88,9 @@ ActiveRecord::Schema.define(version: 20151107213538) do
     t.string   "description"
     t.string   "latitude"
     t.string   "longitude"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "feature_image"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end

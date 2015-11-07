@@ -5,6 +5,7 @@ class CreatePlaces < ActiveRecord::Migration
       t.string :description
       t.string :latitude
       t.string :longitude
+      t.string :feature_image
 
       t.timestamps null: false
     end
