@@ -1,0 +1,2 @@
+module NearPlacesHelper
+end

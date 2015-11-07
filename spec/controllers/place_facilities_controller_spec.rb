@@ -21,7 +21,7 @@ require 'rails_helper'
 RSpec.describe PlaceFacilitiesController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
-  # PlaceFacilitie. As you add validations to PlaceFacilitie, be sure to
+  # PlaceFacility. As you add validations to PlaceFacility, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
@@ -38,63 +38,63 @@ RSpec.describe PlaceFacilitiesController, type: :controller do
 
   describe "GET #index" do
     it "assigns all place_facilities as @place_facilities" do
-      place_facilitie = PlaceFacilitie.create! valid_attributes
+      place_facility = PlaceFacility.create! valid_attributes
       get :index, {}, valid_session
-      expect(assigns(:place_facilities)).to eq([place_facilitie])
+      expect(assigns(:place_facilities)).to eq([place_facility])
     end
   end
 
   describe "GET #show" do
-    it "assigns the requested place_facilitie as @place_facilitie" do
-      place_facilitie = PlaceFacilitie.create! valid_attributes
-      get :show, {:id => place_facilitie.to_param}, valid_session
-      expect(assigns(:place_facilitie)).to eq(place_facilitie)
+    it "assigns the requested place_facility as @place_facility" do
+      place_facility = PlaceFacility.create! valid_attributes
+      get :show, {:id => place_facility.to_param}, valid_session
+      expect(assigns(:place_facility)).to eq(place_facility)
     end
   end
 
   describe "GET #new" do
-    it "assigns a new place_facilitie as @place_facilitie" do
+    it "assigns a new place_facility as @place_facility" do
       get :new, {}, valid_session
-      expect(assigns(:place_facilitie)).to be_a_new(PlaceFacilitie)
+      expect(assigns(:place_facility)).to be_a_new(PlaceFacility)
     end
   end
 
   describe "GET #edit" do
-    it "assigns the requested place_facilitie as @place_facilitie" do
-      place_facilitie = PlaceFacilitie.create! valid_attributes
-      get :edit, {:id => place_facilitie.to_param}, valid_session
-      expect(assigns(:place_facilitie)).to eq(place_facilitie)
+    it "assigns the requested place_facility as @place_facility" do
+      place_facility = PlaceFacility.create! valid_attributes
+      get :edit, {:id => place_facility.to_param}, valid_session
+      expect(assigns(:place_facility)).to eq(place_facility)
     end
   end
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new PlaceFacilitie" do
+      it "creates a new PlaceFacility" do
         expect {
-          post :create, {:place_facilitie => valid_attributes}, valid_session
-        }.to change(PlaceFacilitie, :count).by(1)
+          post :create, {:place_facility => valid_attributes}, valid_session
+        }.to change(PlaceFacility, :count).by(1)
       end
 
-      it "assigns a newly created place_facilitie as @place_facilitie" do
-        post :create, {:place_facilitie => valid_attributes}, valid_session
-        expect(assigns(:place_facilitie)).to be_a(PlaceFacilitie)
-        expect(assigns(:place_facilitie)).to be_persisted
+      it "assigns a newly created place_facility as @place_facility" do
+        post :create, {:place_facility => valid_attributes}, valid_session
+        expect(assigns(:place_facility)).to be_a(PlaceFacility)
+        expect(assigns(:place_facility)).to be_persisted
       end
 
-      it "redirects to the created place_facilitie" do
-        post :create, {:place_facilitie => valid_attributes}, valid_session
-        expect(response).to redirect_to(PlaceFacilitie.last)
+      it "redirects to the created place_facility" do
+        post :create, {:place_facility => valid_attributes}, valid_session
+        expect(response).to redirect_to(PlaceFacility.last)
       end
     end
 
     context "with invalid params" do
-      it "assigns a newly created but unsaved place_facilitie as @place_facilitie" do
-        post :create, {:place_facilitie => invalid_attributes}, valid_session
-        expect(assigns(:place_facilitie)).to be_a_new(PlaceFacilitie)
+      it "assigns a newly created but unsaved place_facility as @place_facility" do
+        post :create, {:place_facility => invalid_attributes}, valid_session
+        expect(assigns(:place_facility)).to be_a_new(PlaceFacility)
       end
 
       it "re-renders the 'new' template" do
-        post :create, {:place_facilitie => invalid_attributes}, valid_session
+        post :create, {:place_facility => invalid_attributes}, valid_session
         expect(response).to render_template("new")
       end
     end
@@ -106,52 +106,52 @@ RSpec.describe PlaceFacilitiesController, type: :controller do
         skip("Add a hash of attributes valid for your model")
       }
 
-      it "updates the requested place_facilitie" do
-        place_facilitie = PlaceFacilitie.create! valid_attributes
-        put :update, {:id => place_facilitie.to_param, :place_facilitie => new_attributes}, valid_session
-        place_facilitie.reload
+      it "updates the requested place_facility" do
+        place_facility = PlaceFacility.create! valid_attributes
+        put :update, {:id => place_facility.to_param, :place_facility => new_attributes}, valid_session
+        place_facility.reload
         skip("Add assertions for updated state")
       end
 
-      it "assigns the requested place_facilitie as @place_facilitie" do
-        place_facilitie = PlaceFacilitie.create! valid_attributes
-        put :update, {:id => place_facilitie.to_param, :place_facilitie => valid_attributes}, valid_session
-        expect(assigns(:place_facilitie)).to eq(place_facilitie)
+      it "assigns the requested place_facility as @place_facility" do
+        place_facility = PlaceFacility.create! valid_attributes
+        put :update, {:id => place_facility.to_param, :place_facility => valid_attributes}, valid_session
+        expect(assigns(:place_facility)).to eq(place_facility)
       end
 
-      it "redirects to the place_facilitie" do
-        place_facilitie = PlaceFacilitie.create! valid_attributes
-        put :update, {:id => place_facilitie.to_param, :place_facilitie => valid_attributes}, valid_session
-        expect(response).to redirect_to(place_facilitie)
+      it "redirects to the place_facility" do
+        place_facility = PlaceFacility.create! valid_attributes
+        put :update, {:id => place_facility.to_param, :place_facility => valid_attributes}, valid_session
+        expect(response).to redirect_to(place_facility)
       end
     end
 
     context "with invalid params" do
-      it "assigns the place_facilitie as @place_facilitie" do
-        place_facilitie = PlaceFacilitie.create! valid_attributes
-        put :update, {:id => place_facilitie.to_param, :place_facilitie => invalid_attributes}, valid_session
-        expect(assigns(:place_facilitie)).to eq(place_facilitie)
+      it "assigns the place_facility as @place_facility" do
+        place_facility = PlaceFacility.create! valid_attributes
+        put :update, {:id => place_facility.to_param, :place_facility => invalid_attributes}, valid_session
+        expect(assigns(:place_facility)).to eq(place_facility)
       end
 
       it "re-renders the 'edit' template" do
-        place_facilitie = PlaceFacilitie.create! valid_attributes
-        put :update, {:id => place_facilitie.to_param, :place_facilitie => invalid_attributes}, valid_session
+        place_facility = PlaceFacility.create! valid_attributes
+        put :update, {:id => place_facility.to_param, :place_facility => invalid_attributes}, valid_session
         expect(response).to render_template("edit")
       end
     end
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested place_facilitie" do
-      place_facilitie = PlaceFacilitie.create! valid_attributes
+    it "destroys the requested place_facility" do
+      place_facility = PlaceFacility.create! valid_attributes
       expect {
-        delete :destroy, {:id => place_facilitie.to_param}, valid_session
-      }.to change(PlaceFacilitie, :count).by(-1)
+        delete :destroy, {:id => place_facility.to_param}, valid_session
+      }.to change(PlaceFacility, :count).by(-1)
     end
 
     it "redirects to the place_facilities list" do
-      place_facilitie = PlaceFacilitie.create! valid_attributes
-      delete :destroy, {:id => place_facilitie.to_param}, valid_session
+      place_facility = PlaceFacility.create! valid_attributes
+      delete :destroy, {:id => place_facility.to_param}, valid_session
       expect(response).to redirect_to(place_facilities_url)
     end
   end

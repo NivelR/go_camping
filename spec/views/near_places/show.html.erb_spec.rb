@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "place_nears/show", type: :view do
+RSpec.describe "near_places/show", type: :view do
   before(:each) do
-    @place_near = assign(:place_near, PlaceNear.create!(
+    @near_place = assign(:near_place, NearPlace.create!(
       :kiosk => false,
       :disco => false,
       :beach => false,

@@ -1,6 +1,6 @@
-class CreatePlaceNears < ActiveRecord::Migration
+class CreateNearPlaces < ActiveRecord::Migration
   def change
-    create_table :place_nears do |t|
+    create_table :near_places do |t|
       t.boolean :kiosk
       t.boolean :disco
       t.boolean :beach

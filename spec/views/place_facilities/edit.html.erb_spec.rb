@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "place_facilities/edit", type: :view do
   before(:each) do
-    @place_facilitie = assign(:place_facilitie, PlaceFacilitie.create!(
+    @place_facility = assign(:place_facility, PlaceFacility.create!(
       :private_toilet => false,
-      :private_shared_toilet => false,
+      :shared_toilet => false,
       :hot_water => false,
       :fridge => false,
       :kitchen => false,
@@ -21,40 +21,40 @@ RSpec.describe "place_facilities/edit", type: :view do
     ))
   end
 
-  it "renders the edit place_facilitie form" do
+  it "renders the edit place_facility form" do
     render
 
-    assert_select "form[action=?][method=?]", place_facilitie_path(@place_facilitie), "post" do
+    assert_select "form[action=?][method=?]", place_facility_path(@place_facility), "post" do
 
-      assert_select "input#place_facilitie_private_toilet[name=?]", "place_facilitie[private_toilet]"
+      assert_select "input#place_facility_private_toilet[name=?]", "place_facility[private_toilet]"
 
-      assert_select "input#place_facilitie_private_shared_toilet[name=?]", "place_facilitie[private_shared_toilet]"
+      assert_select "input#place_facility_shared_toilet[name=?]", "place_facility[shared_toilet]"
 
-      assert_select "input#place_facilitie_hot_water[name=?]", "place_facilitie[hot_water]"
+      assert_select "input#place_facility_hot_water[name=?]", "place_facility[hot_water]"
 
-      assert_select "input#place_facilitie_fridge[name=?]", "place_facilitie[fridge]"
+      assert_select "input#place_facility_fridge[name=?]", "place_facility[fridge]"
 
-      assert_select "input#place_facilitie_kitchen[name=?]", "place_facilitie[kitchen]"
+      assert_select "input#place_facility_kitchen[name=?]", "place_facility[kitchen]"
 
-      assert_select "input#place_facilitie_microwave[name=?]", "place_facilitie[microwave]"
+      assert_select "input#place_facility_microwave[name=?]", "place_facility[microwave]"
 
-      assert_select "input#place_facilitie_parking[name=?]", "place_facilitie[parking]"
+      assert_select "input#place_facility_parking[name=?]", "place_facility[parking]"
 
-      assert_select "input#place_facilitie_boat_ramp[name=?]", "place_facilitie[boat_ramp]"
+      assert_select "input#place_facility_boat_ramp[name=?]", "place_facility[boat_ramp]"
 
-      assert_select "input#place_facilitie_barbecue_area[name=?]", "place_facilitie[barbecue_area]"
+      assert_select "input#place_facility_barbecue_area[name=?]", "place_facility[barbecue_area]"
 
-      assert_select "input#place_facilitie_grill_shed[name=?]", "place_facilitie[grill_shed]"
+      assert_select "input#place_facility_grill_shed[name=?]", "place_facility[grill_shed]"
 
-      assert_select "input#place_facilitie_campfire_place[name=?]", "place_facilitie[campfire_place]"
+      assert_select "input#place_facility_campfire_place[name=?]", "place_facility[campfire_place]"
 
-      assert_select "input#place_facilitie_swimming_pool[name=?]", "place_facilitie[swimming_pool]"
+      assert_select "input#place_facility_swimming_pool[name=?]", "place_facility[swimming_pool]"
 
-      assert_select "input#place_facilitie_sound_system[name=?]", "place_facilitie[sound_system]"
+      assert_select "input#place_facility_sound_system[name=?]", "place_facility[sound_system]"
 
-      assert_select "input#place_facilitie_other[name=?]", "place_facilitie[other]"
+      assert_select "input#place_facility_other[name=?]", "place_facility[other]"
 
-      assert_select "input#place_facilitie_place_id[name=?]", "place_facilitie[place_id]"
+      assert_select "input#place_facility_place_id[name=?]", "place_facility[place_id]"
     end
   end
 end

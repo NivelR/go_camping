@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Private toilet</th>
-      <th>Private shared toilet</th>
+      <th>Shared toilet</th>
       <th>Hot water</th>
       <th>Fridge</th>
       <th>Kitchen</th>
@@ -28,7 +28,7 @@
     <% @place_facilities.each do |place_facility| %>
       <tr>
         <td><%= place_facility.private_toilet %></td>
-        <td><%= place_facility.private_shared_toilet %></td>
+        <td><%= place_facility.shared_toilet %></td>
         <td><%= place_facility.hot_water %></td>
         <td><%= place_facility.fridge %></td>
         <td><%= place_facility.kitchen %></td>
@@ -52,4 +52,4 @@
 
 <br>
 
-<%= link_to 'New Place facilitie', new_place_facility_path %>
+<%= link_to 'New Place facility', new_place_facility_path %>

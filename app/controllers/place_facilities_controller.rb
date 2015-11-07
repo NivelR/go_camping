@@ -4,7 +4,7 @@ class PlaceFacilitiesController < ApplicationController
   # GET /place_facilities
   # GET /place_facilities.json
   def index
-    @place_facilities = PlaceFacilitie.all
+    @place_facilities = PlaceFacility.all
   end
 
   # GET /place_facilities/1
@@ -14,7 +14,7 @@ class PlaceFacilitiesController < ApplicationController
 
   # GET /place_facilities/new
   def new
-    @place_facility = PlaceFacilitie.new
+    @place_facility = PlaceFacility.new
   end
 
   # GET /place_facilities/1/edit
@@ -24,11 +24,11 @@ class PlaceFacilitiesController < ApplicationController
   # POST /place_facilities
   # POST /place_facilities.json
   def create
-    @place_facility = PlaceFacilitie.new(place_facility_params)
+    @place_facility = PlaceFacility.new(place_facility_params)
 
     respond_to do |format|
       if @place_facility.save
-        format.html { redirect_to @place_facility, notice: 'Place facilitie was successfully created.' }
+        format.html { redirect_to @place_facility, notice: 'Place facility was successfully created.' }
         format.json { render :show, status: :created, location: @place_facility }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PlaceFacilitiesController < ApplicationController
   def update
     respond_to do |format|
       if @place_facility.update(place_facility_params)
-        format.html { redirect_to @place_facility, notice: 'Place facilitie was successfully updated.' }
+        format.html { redirect_to @place_facility, notice: 'Place facility was successfully updated.' }
         format.json { render :show, status: :ok, location: @place_facility }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PlaceFacilitiesController < ApplicationController
   def destroy
     @place_facility.destroy
     respond_to do |format|
-      format.html { redirect_to place_facilities_url, notice: 'Place facilitie was successfully destroyed.' }
+      format.html { redirect_to place_facilities_url, notice: 'Place facility was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,11 +64,11 @@ class PlaceFacilitiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_place_facility
-      @place_facility = PlaceFacilitie.find(params[:id])
+      @place_facility = PlaceFacility.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_facility_params
-      params.require(:place_facility).permit(:private_toilet, :private_shared_toilet, :hot_water, :fridge, :kitchen, :microwave, :parking, :boat_ramp, :barbecue_area, :grill_shed, :campfire_place, :swimming_pool, :sound_system, :other, :place_id)
+      params.require(:place_facility).permit(:private_toilet, :shared_toilet, :hot_water, :fridge, :kitchen, :microwave, :parking, :boat_ramp, :barbecue_area, :grill_shed, :campfire_place, :swimming_pool, :sound_system, :other, :place_id)
     end
 end

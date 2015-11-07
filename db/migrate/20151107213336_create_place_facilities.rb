@@ -2,7 +2,7 @@ class CreatePlaceFacilities < ActiveRecord::Migration
   def change
     create_table :place_facilities do |t|
       t.boolean :private_toilet
-      t.boolean :private_shared_toilet
+      t.boolean :shared_toilet
       t.boolean :hot_water
       t.boolean :fridge
       t.boolean :kitchen
