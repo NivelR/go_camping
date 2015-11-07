@@ -1,7 +1,7 @@
 FactoryGirl.define do
-  factory :place_facility, :class => 'PlaceFacilitie' do
+  factory :place_facility do
     private_toilet false
-private_shared_toilet false
+shared_toilet false
 hot_water false
 fridge false
 kitchen false

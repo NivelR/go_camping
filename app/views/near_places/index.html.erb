@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Near Places</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kiosk</th>
+      <th>Disco</th>
+      <th>Beach</th>
+      <th>National park</th>
+      <th>Other</th>
+      <th>Place</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @near_places.each do |near_place| %>
+      <tr>
+        <td><%= near_place.kiosk %></td>
+        <td><%= near_place.disco %></td>
+        <td><%= near_place.beach %></td>
+        <td><%= near_place.national_park %></td>
+        <td><%= near_place.other %></td>
+        <td><%= near_place.place %></td>
+        <td><%= link_to 'Show', near_place %></td>
+        <td><%= link_to 'Edit', edit_near_place_path(near_place) %></td>
+        <td><%= link_to 'Destroy', near_place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Near place', new_near_place_path %>

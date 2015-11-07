@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "place_facilities/show", type: :view do
   before(:each) do
-    @place_facilitie = assign(:place_facilitie, PlaceFacilitie.create!(
+    @place_facility = assign(:place_facility, PlaceFacility.create!(
       :private_toilet => false,
-      :private_shared_toilet => false,
+      :shared_toilet => false,
       :hot_water => false,
       :fridge => false,
       :kitchen => false,

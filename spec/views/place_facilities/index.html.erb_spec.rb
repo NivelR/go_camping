@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe "place_facilities/index", type: :view do
   before(:each) do
     assign(:place_facilities, [
-      PlaceFacilitie.create!(
+      PlaceFacility.create!(
         :private_toilet => false,
-        :private_shared_toilet => false,
+        :shared_toilet => false,
         :hot_water => false,
         :fridge => false,
         :kitchen => false,
@@ -20,9 +20,9 @@ RSpec.describe "place_facilities/index", type: :view do
         :other => "Other",
         :place => nil
       ),
-      PlaceFacilitie.create!(
+      PlaceFacility.create!(
         :private_toilet => false,
-        :private_shared_toilet => false,
+        :shared_toilet => false,
         :hot_water => false,
         :fridge => false,
         :kitchen => false,

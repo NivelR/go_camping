@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kiosk:</strong>
+  <%= @near_place.kiosk %>
+</p>
+
+<p>
+  <strong>Disco:</strong>
+  <%= @near_place.disco %>
+</p>
+
+<p>
+  <strong>Beach:</strong>
+  <%= @near_place.beach %>
+</p>
+
+<p>
+  <strong>National park:</strong>
+  <%= @near_place.national_park %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @near_place.other %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @near_place.place %>
+</p>
+
+<%= link_to 'Edit', edit_near_place_path(@near_place) %> |
+<%= link_to 'Back', near_places_path %>

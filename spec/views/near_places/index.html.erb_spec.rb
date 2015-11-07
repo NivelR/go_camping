@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "place_nears/index", type: :view do
+RSpec.describe "near_places/index", type: :view do
   before(:each) do
-    assign(:place_nears, [
-      PlaceNear.create!(
+    assign(:near_places, [
+      NearPlace.create!(
         :kiosk => false,
         :disco => false,
         :beach => false,
@@ -11,7 +11,7 @@ RSpec.describe "place_nears/index", type: :view do
         :other => "Other",
         :place => nil
       ),
-      PlaceNear.create!(
+      NearPlace.create!(
         :kiosk => false,
         :disco => false,
         :beach => false,
@@ -22,7 +22,7 @@ RSpec.describe "place_nears/index", type: :view do
     ])
   end
 
-  it "renders a list of place_nears" do
+  it "renders a list of near_places" do
     render
     assert_select "tr>td", :text => false.to_s, :count => 2
     assert_select "tr>td", :text => false.to_s, :count => 2

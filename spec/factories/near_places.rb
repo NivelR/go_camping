@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :place_near do
+  factory :near_place do
     kiosk false
 disco false
 beach false
