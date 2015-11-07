@@ -35,12 +35,11 @@ end
 
 
 near_places = [
-{:kiosk => true, :disco => false, :beach => false, :national_park => true, :other => "", :place_id => "3"},
-
-{:kiosk => true, :disco => true, :beach => true,"national_park":false,"other":"private beach", :place_id => "2"},
-
-{:kiosk => true, :disco => true, :beach => true, :national_park => false, :other => "Universty facilities", :place_id => "1"}
+  {:kiosk => true, :disco => false, :beach => false, :national_park => true, :other => "", :place_id => "3"},
+  {:kiosk => true, :disco => true, :beach => true,"national_park":false,"other":"private beach", :place_id => "2"},
+  {:kiosk => true, :disco => true, :beach => true, :national_park => false, :other => "Universty facilities", :place_id => "1"}
 ]
 near_places.each do |near_place|
    NearPlace.create!(near_place)
 end
+
