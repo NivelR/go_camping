@@ -8,6 +8,7 @@ class CreatePlaces < ActiveRecord::Migration
       t.string :latitude
       t.string :longitude
       t.string :feature_image
+      t.boolean :vacancy
 
       t.timestamps null: false
     end
