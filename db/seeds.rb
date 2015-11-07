@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 places = [
-  {:name => ' Patio Santa Ana',:description => 'un lindo patio',:latitude => "-27.471782", :longitude => "-58.669532", :country => "argentina", :state => "corrientes", :feature_image => "https://source.unsplash.com/category/nature/1600x900"},
-  {:name => ' Campus UNNE',:description => 'un lindo patio',:latitude => "-27.4653708", :longitude => "-58.793242,15z", :country => "argentina", :state => "corrientes", :feature_image => "https://source.unsplash.com/category/nature/1600x900"},     
-  {:name => ' Yacare',:description => 'un lindo patio',:latitude => "-27.457030", :longitude => "-58.823898", :country => "argentina", :state => "corrientes", :feature_image => "https://source.unsplash.com/category/nature/1600x900"}     
+  {:name => ' Patio Santa Ana', :description => 'un lindo patio', :latitude => "-27.471782", :longitude => "-58.669532", :country => "argentina", :state => "corrientes", :feature_image => "https://source.unsplash.com/category/nature/1600x900"},
+  {:name => ' Campus UNNE', :description => 'un lindo patio', :latitude => "-27.4653708", :longitude => "-58.793242,15z", :country => "argentina", :state => "corrientes", :feature_image => "https://source.unsplash.com/category/nature/1600x900"},     
+  {:name => ' Yacare', :description => 'un lindo patio', :latitude => "-27.457030", :longitude => "-58.823898", :country => "argentina", :state => "corrientes", :feature_image => "https://source.unsplash.com/category/nature/1600x900"}     
 ]
 places.each do |place|
    Place.create!(place)
@@ -43,3 +43,20 @@ near_places.each do |near_place|
    NearPlace.create!(near_place)
 end
 
+place_services = [
+  {:dry_cleaning =>false, :public_transport => "Bus 109, 11","other" => "horse,  quadricycle", :place_id => "3"},
+  {:dry_cleaning => false, :public_transport => "Bus 105A, 105C, 105D, 110","other" => "Private Security", :place_id => "2"},
+  {:dry_cleaning => false, :public_transport => "Bus 104A, 104C, 104D, 110","other" => "Mesas, Sillas", :place_id => "1"}
+]
+place_services.each do |service|
+   PlaceService.create!(service)
+end
+
+place_sports = [
+  {:ping_pong_table => true, :canoe => false, :soccer_field => false, :platform_tennis_court => false, :volleyball_court => false, :other => "", :place_id => "3"},
+  {:ping_pong_table => false, :canoe => false, :soccer_field => true, :platform_tennis_court => false, :volleyball_court => true, :other => "rugby court", :place_id => "2"},
+  {:ping_pong_table => false, :canoe => true, :soccer_field => false, :platform_tennis_court => false, :volleyball_court => true, :other => "fishing zone", :place_id => "1"}
+]
+place_sports.each do |place_sport|
+   PlaceSport.create!(place_sport)
+end
