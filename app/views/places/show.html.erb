@@ -22,6 +22,12 @@
           <p><span class="glyphicon glyphicon-globe" > Latitude </span><%= @place.latitude %>
            - <span class="glyphicon glyphicon-globe" > Longitude </span><%= @place.longitude %></p>
           <p><span class="glyphicon glyphicon-eye-open"> VACANCY: </span> <strong><%= @place.vacancy %></strong></p>
+
+          <div style='width: 100%;'>
+            <div id="map" style='width: 100%; height: 300px;'>
+              <%= render 'place_map' %>
+            </div>
+          </div>
           <hr>
           <!-- ACA los otros modelos -->
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -111,6 +117,7 @@
 
         </div>
         <div class="ratings">
+          <a href="#" class="btn btn-success">Reserve this place</a>
           <p class="pull-right"><a href='<%= url_for(action: 'show', controller: 'places', only_path: false, protocol: 'http') %>#disqus_thread'></a></p>
           <p>
             <span class="glyphicon glyphicon-star"></span>
