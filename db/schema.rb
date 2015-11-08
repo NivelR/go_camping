@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20151107231930) do
 
   create_table "place_facilities", force: :cascade do |t|
     t.boolean  "private_toilet"
-    t.boolean  "shared_toilet"
+    t.boolean  "private_shared_toilet"
     t.boolean  "hot_water"
     t.boolean  "fridge"
     t.boolean  "kitchen"
@@ -52,11 +52,24 @@ ActiveRecord::Schema.define(version: 20151107231930) do
     t.boolean  "sound_system"
     t.string   "other"
     t.integer  "place_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   add_index "place_facilities", ["place_id"], name: "index_place_facilities_on_place_id"
+
+  create_table "place_nears", force: :cascade do |t|
+    t.boolean  "kiosk"
+    t.boolean  "disco"
+    t.boolean  "beach"
+    t.boolean  "national_park"
+    t.string   "other"
+    t.integer  "place_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "place_nears", ["place_id"], name: "index_place_nears_on_place_id"
 
   create_table "place_services", force: :cascade do |t|
     t.boolean  "dry_cleaning"
@@ -86,14 +99,10 @@ ActiveRecord::Schema.define(version: 20151107231930) do
   create_table "places", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.string   "country"
-    t.string   "state"
     t.string   "latitude"
     t.string   "longitude"
-    t.string   "feature_image"
-    t.boolean  "vacancy"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
