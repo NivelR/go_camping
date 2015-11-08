@@ -17,6 +17,7 @@ deploy:
     repo: railsrumble/r15-team-118
     all_branches: true
   run:
+  - rake db:drop
   - bundle exec rake db:migrate --trace
   - rake db:schema:load --trace
   - rake db:seed
