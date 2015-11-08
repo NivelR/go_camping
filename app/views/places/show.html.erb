@@ -67,7 +67,12 @@
               </div>
               <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
-                  <%= render partial: "near_places/near_places", object: @place if @place.near_place %> 
+                  <ul>
+                  <% @place.nearbys(10).each do |place| %>
+                    <li><%= link_to place.name, place %> (<%= place.distance.round(2) %>) miles</li>
+                  <% end %>
+                  </ul>
+                  <%= render partial: "near_places/near_places", object: @place if @place.near_place %>
                 </div>
               </div>
             </div>
@@ -104,8 +109,8 @@
             </div>
             <!-- //panel -->
           </div>
-<!-- // fin otros modelos --> 
-          
+<!-- // fin otros modelos -->
+
         </div>
         <div class="ratings">
           <p class="pull-right"><a href='<%= url_for(action: 'show', controller: 'places', only_path: false, protocol: 'http') %>#disqus_thread'></a></p>

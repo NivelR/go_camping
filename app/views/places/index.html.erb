@@ -6,12 +6,19 @@
           <h1 class="page-header">Places for camp
               <small>-Mom: WTF! backpackers camping in our backyard</small>
           </h1>
+          <% if @hash %>
+            <div style='width: 800px;'>
+              <div id="map" style='width: 800px; height: 400px;'>
+                <%= render 'map' %>
+              </div>
+            </div>
+          <% end %>
       </div>
   </div>
   <!-- /.row -->
- 
+
   <div class="row">
-      
+
   <% @places.each do |place| %>
   <!-- Projects Row -->
         <div class="col-md-6 portfolio-item">

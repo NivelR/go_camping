@@ -4,14 +4,19 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    filtrar_pais if params[:country]
-    @places = Place.all unless params[:country] || params[:state] 
-        #render json: @places
+    filter_by_country if params[:search]
+    @places = Place.all unless params[:search]
   end
 
-  def filtrar_pais
-    pais = params[:country]
+  def filter_by_country
+    pais = params[:search]
     @places = Place.where(country: pais)
+    @hash = Gmaps4rails.build_markers(@places) do |place, marker|
+			marker.lat place.latitude
+			marker.lng place.longitude
+			marker.infowindow "<a href='/places/"+"#{place.id}"+"'>#{place.name}, #{place.state}</a>"
+			marker.json({ title: place.name, id: place.id })
+		end
   end
 
   # GET /places/1
