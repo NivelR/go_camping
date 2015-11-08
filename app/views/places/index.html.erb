@@ -1,0 +1,32 @@
+<!-- Page Content -->
+<div class="container">
+  <!-- Page Header -->
+  <div class="row">
+      <div class="col-lg-12">
+          <h1 class="page-header">Places for camp
+              <small>WTF! backpackers camping in our my backyard/small>
+          </h1>
+      </div>
+  </div>
+  <!-- /.row -->
+ 
+  <div class="row">
+      
+  <% @places.each do |place| %>
+  <!-- Projects Row -->
+        <div class="col-md-6 portfolio-item">
+          <a href="<%= place_path(place) %>">
+              <img class="img-responsive" src="<%= place.feature_image %>" alt="">
+          </a>
+          <h3>
+              <a href="<%= place_path(place) %>"><%= place.name %></a>
+          </h3>
+          <p><%= place.description %></p>
+      
+      </div>
+      <% end %>
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
