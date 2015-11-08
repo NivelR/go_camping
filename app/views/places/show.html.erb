@@ -3,11 +3,11 @@
 
   <div class="row">
     <div class="col-md-3">
-      <p class="lead">millennials backpackers</p>
+      <p class="lead">GoCamp backpackers</p>
       <div class="list-group">
-        <a href="#" class="list-group-item active">Camps</a>
-        <a href="#" class="list-group-item">Sofas</a>
-        <a href="#" class="list-group-item">Hostels</a>
+        <a href="<%= places_path %>" class="list-group-item active">Camps</a>
+        <a href="" class="list-group-item">Sofas</a>
+        <a href="" class="list-group-item">Hostels</a>
       </div>
     </div>
 
@@ -15,7 +15,7 @@
       <div class="thumbnail">
         <img class="img-responsive" src="<%= @place.feature_image %>" alt="">
         <div class="caption-full">
-          <h4 class="pull-right">$<%= @place.place_cost.price %></h4>
+          <h4 class="pull-right">$<%= @place.place_cost.price if @place.place_cost %></h4>
           <h4><a href="#"><%= @place.name %></a>
           </h4>
           <p><%= @place.description %></p>
@@ -38,7 +38,7 @@
               </div>
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
-                  <%= render partial: "place_facilities/facilities", object: @place %>
+                  <%= render partial: "place_facilities/facilities", object: @place if @place.place_facility %>
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@
               </div>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
-                  <%= render partial: "place_sports/place_sports", object: @place %>
+                  <%= render partial: "place_sports/place_sports", object: @place if @place.place_sport %>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@
               </div>
               <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
-                  <%= render partial: "near_places/near_places", object: @place %> 
+                  <%= render partial: "near_places/near_places", object: @place if @place.near_place %> 
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@
               </div>
               <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                 <div class="panel-body">
-                  <%= render partial: "place_services/place_services", object: @place %>
+                  <%= render partial: "place_services/place_services", object: @place if @place.place_service %>
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@
               </div>
               <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                 <div class="panel-body">
-                  <%= render partial: "place_costs/place_costs", object: @place %>
+                  <%= render partial: "place_costs/place_costs", object: @place if @place.place_cost %>
                 </div>
               </div>
             </div>

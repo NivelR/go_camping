@@ -4,7 +4,7 @@
   <div class="row">
       <div class="col-lg-12">
           <h1 class="page-header">Places for camp
-              <small>WTF! backpackers camping in our my backyard/small>
+              <small>-Mom: WTF! backpackers camping in our backyard</small>
           </h1>
       </div>
   </div>
@@ -20,9 +20,10 @@
           </a>
           <h3>
               <a href="<%= place_path(place) %>"><%= place.name %></a>
+               <small><%= place.state.capitalize %> (<%= place.country.capitalize %>)<%= " - $ " + place.place_cost.price.to_s if place.place_cost  %></small>
           </h3>
           <p><%= place.description %></p>
-      
+          <p><a href="<%= place_path(place) %>">Read more</a></p>
       </div>
       <% end %>
   </div>
