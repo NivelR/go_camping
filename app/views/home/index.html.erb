@@ -117,30 +117,27 @@
               </h2>
             </div>
           </a>
-        </div>
-        <!-- comentado
+        </div> 
         <div class="col-md-8 gallery-grid1">
-          <a href="#" class="b-link-stripe b-animate-go  thickbox">
+          <a href="<%= new_place_path %>" class="b-link-stripe b-animate-go  thickbox">
             <%= image_tag "g11.jpg", class: "port-pic" %>
             <div class="b-wrapper">
               <h2 class="b-animate b-from-left    b-delay03 ">
-                <span> Seattle places</span>
-                <button>View places</button>
-                <label> <i class="fa fa-heart"> </i> 21</label>
+                <span> Add your Place</span>
+                <button>Add Now! it free</button>
+                <label> <i class="fa fa-star"> </i></label>
               </h2>
             </div>
           </a>
         </div>
         <div class="clearfix"> </div>
-        <p class="place">Faena House / <a href="#">Seattle</a></p>
-      </div>
-    </div>
-    
-     <a class="view-gallery-btn" href="#">View all</a> 
-    // comentado -->
-    <%= link_to "View all", places_path, class: "view-gallery-btn"  %>
+        <p class="place">Your House / <a href="#">Your Place</a></p>
+      </div>      
+    </div>    
   </div>
 </div>
+   <%= link_to "View all", places_path, class: "view-gallery-btn"  %>
+
 <!-- //End-gallery -->
 <!-- start-consulation -->
 <div id="con" class="consulation">
