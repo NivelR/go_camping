@@ -1,18 +1,16 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Regard:</strong>
-  <%= @place_cost.regard %>
+  <%= @place.place_cost.regard %>
 </p>
 
 <p>
   <strong>Price:</strong>
-  <%= @place_cost.price %>
+  <%= @place.place_cost.price %>
 </p>
 
 <p>
   <strong>Place:</strong>
-  <%= @place_cost.place %>
+  <%= @place.place_cost.place %>
 </p>
 
 <%= link_to 'Edit', edit_place_cost_path(@place_cost) %> |
