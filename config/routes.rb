@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
+  get 'home/index'
+
   resources :near_places
   resources :place_facilities
   resources :place_costs
   resources :place_services
   resources :place_sports
-  get 'home/index'
-
   resources :places
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
