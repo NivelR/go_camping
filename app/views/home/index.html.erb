@@ -1,13 +1,13 @@
-<!-----start-container---->
+<!-- start-container -->
   <div class="bg">
     <div class="container">
     <div class="header">
       <div class="logo">
-        <a href="#"><%= image_tag "logo.png", title: "miami" %><a>
+        <a href="#"><%= image_tag "logo.png", title: "logo" %><a>
       </div>
       <div class="clearfix"> </div>
     </div>
-      <!----start-top-nav---->
+      <!-- start-top-nav -->
      <nav class="top-nav">
       <ul class="top-nav">
         <li class="active"><a href="#home" class="scroll">Home</a></li>
@@ -20,7 +20,7 @@
     </nav>
   </div>
 </div>
-<!-----start-about---->
+<!-- start-about -->
 <div id="about" class="about">
   <div class="container">
     <div class="col-md-7 about-left">
@@ -41,33 +41,34 @@
     <div class="clearfix"> </div>
   </div>
 </div>
-<!-----//End-about---->
-<!----start-gallery---->
+<!-- //End-about -->
+
+<!-- start-gallery -->
 <div id="gal" class="gallery">
   <div class="container">
     <div class="head">
-      <h3>Places <span> </span></h3>
+      <h3>Places <span></span></h3>
     </div>
     <div class="gallery-grids">
       <div class="gallery-grids-row1">
         <div class="col-md-8 gallery-grid1">
-          <a href="#" class="b-link-stripe b-animate-go  thickbox">
+          <a href="<%= places_path %>?country=argentina" class="b-link-stripe b-animate-go  thickbox">
             <%= image_tag "g1.jpg", class: "port-pic" %>
             <div class="b-wrapper">
-              <h2 class="b-animate b-from-left    b-delay03 ">
+              <h2 class="b-animate b-from-left b-delay03">
                 <span> Argentina places</span>
-                <button>View place</button>
+                <button>View places</button>
               </h2>
             </div>
           </a>
         </div>
         <div class="col-md-4 gallery-grid1">
-          <a href="#" class="b-link-stripe b-animate-go  thickbox">
+          <a href="<%= places_path %>?country=argentina" class="b-link-stripe b-animate-go  thickbox">
             <%= image_tag "g2.jpg", class: "port-pic" %>
             <div class="b-wrapper">
               <h2 class="b-animate b-from-left    b-delay03 ">
                 <span> Argentina places</span>
-                <button>View place</button>
+                <button>View places</button>
               </h2>
             </div>
           </a>
@@ -77,53 +78,54 @@
       </div>
       <div class="gallery-grids-row1">
         <div class="col-md-6 gallery-grid1">
-          <a href="#" class="b-link-stripe b-animate-go  thickbox">
+          <a href="<%= places_path %>?country=chile" class="b-link-stripe b-animate-go  thickbox">
             <%= image_tag "g3.jpeg", class: "port-pic" %>
             <div class="b-wrapper">
               <h2 class="b-animate b-from-left    b-delay03 ">
-                <span> switzerland places</span>
-                <button>View photo</button>
+                <span> Chile places</span>
+                <button>View places</button>
                 <label> <i class="fa fa-heart"> </i> 21</label>
               </h2>
             </div>
           </a>
         </div>
         <div class="col-md-6 gallery-grid1">
-          <a href="#" class="b-link-stripe b-animate-go  thickbox">
+          <a href="<%= places_path %>?country=uruguay" class="b-link-stripe b-animate-go  thickbox">
             <%= image_tag "g4.jpg", class: "port-pic" %>
             <div class="b-wrapper">
               <h2 class="b-animate b-from-left    b-delay03 ">
-                <span> switzerland places</span>
-                <button>View photo</button>
+                <span> Uruguay places</span>
+                <button>View places</button>
                 <label> <i class="fa fa-heart"> </i> 21</label>
               </h2>
             </div>
           </a>
         </div>
         <div class="clearfix"> </div>
-        <p class="place">Switzerland /<a href="#"></a></p>
+        <p class="place">Uruguay /<a href="#"></a></p>
       </div>
-      <!----->
+      
       <div class="gallery-grids-row1">
         <div class="col-md-4 gallery-grid1">
-          <a href="#" class="b-link-stripe b-animate-go  thickbox">
+          <a href="<%= places_path %>?country=paraguay" class="b-link-stripe b-animate-go  thickbox">
             <%= image_tag "g22.jpg", class: "port-pic" %>
             <div class="b-wrapper">
               <h2 class="b-animate b-from-left    b-delay03 ">
-                <span> Seattle places</span>
-                <button>View photo</button>
+                <span> Paraguay places</span>
+                <button>View places</button>
                 <label> <i class="fa fa-heart"> </i> 21</label>
               </h2>
             </div>
           </a>
         </div>
+        <!-- comentado
         <div class="col-md-8 gallery-grid1">
           <a href="#" class="b-link-stripe b-animate-go  thickbox">
             <%= image_tag "g11.jpg", class: "port-pic" %>
             <div class="b-wrapper">
               <h2 class="b-animate b-from-left    b-delay03 ">
                 <span> Seattle places</span>
-                <button>View photo</button>
+                <button>View places</button>
                 <label> <i class="fa fa-heart"> </i> 21</label>
               </h2>
             </div>
@@ -133,11 +135,13 @@
         <p class="place">Faena House / <a href="#">Seattle</a></p>
       </div>
     </div>
+    
+     <a class="view-gallery-btn" href="#">View all</a> 
+    // comentado -->
     <%= link_to "View all", places_path, class: "view-gallery-btn"  %>
-    <!-- <a class="view-gallery-btn" href="#">View all</a> -->
   </div>
 </div>
-<!----//End-gallery---->
+<!-- //End-gallery -->
 <!-- start-consulation -->
 <div id="con" class="consulation">
   <div class="container">
@@ -160,13 +164,13 @@
 </div>
 <!-- //End-consulation -->
 
-<!----start-testmonials---->
+<!-- start-testmonials -->
 <div id="test" class="testmonials">
   <div class="container">
     <div class="head c-head">
         <h3>Testimonials <span> </span></h3>
     </div>
-    <!----start-testmonials-grids----->
+    <!-- start-testmonials-grids -->
     <div class="testmonials-grids text-center">
       <div class="col-md-4 testmonial-grid">
         <a href="#"><%= image_tag "t1.jpg", class: "t-pic", title: "name" %></a>
@@ -188,17 +192,17 @@
       </div>
       <div class="clearfix"> </div>
     </div>
-    <!----//End-testmonials-grids----->
+    <!-- //End-testmonials-grids -->
   </div>
 </div>
-<!----//End-testmonials---->
-<!----start-footer---->
+<!-- //End-testmonials -->
+<!-- start-footer -->
 <div class="footer text-center">
   <div class="container">
-    <!-- <a href="#"> <%= image_tag "logo.png", title: "miami" %></a> -->
+    <a href="#"> <%= image_tag "logo.png", title: "logo" %></a>
     <p class="copy-right">Template by <a href="http://w3layouts.com/">W3layouts</a></p>
     <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
   </div>
 </div>
-<!----//End-footer---->
-<!-----//End-container---->
+<!-- //End-footer -->
+<!-- //End-container -->

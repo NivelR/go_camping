@@ -4,8 +4,14 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    @places = Place.all
+    filtrar_pais if params[:country]
+    @places = Place.all unless params[:country] || params[:state] 
         #render json: @places
+  end
+
+  def filtrar_pais
+    pais = params[:country]
+    @places = Place.where(country: pais)
   end
 
   # GET /places/1
@@ -70,6 +76,6 @@ class PlacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:name, :description, :latitude, :longitude)
+      params.require(:place).permit(:name, :description, :latitude, :longitude, :country, :state)
     end
 end
