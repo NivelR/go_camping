@@ -86,10 +86,14 @@ ActiveRecord::Schema.define(version: 20151107231930) do
   create_table "places", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
+    t.string   "country"
+    t.string   "state"
     t.string   "latitude"
     t.string   "longitude"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "feature_image"
+    t.boolean  "vacancy"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end

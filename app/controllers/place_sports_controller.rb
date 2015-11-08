@@ -24,7 +24,9 @@ class PlaceSportsController < ApplicationController
   # POST /place_sports
   # POST /place_sports.json
   def create
-    @place_sport = PlaceSport.new(place_sport_params)
+    @place = Place.find(@_params[:place_sport][:place_id].to_i)
+    @notification = @place.place_sport.build(place_sport_params)
+    #@place_sport = PlaceSport.new(place_sport_params)
 
     respond_to do |format|
       if @place_sport.save
