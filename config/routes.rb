@@ -1,6 +1,21 @@
 Rails.application.routes.draw do
+  devise_for :users, :path_prefix => 'my'
+  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
+  scope "/admin" do
+    resources :users
+  end
+
+  unauthenticated do
+    get 'home/index'
+  end
+
+  authenticated do
+    get 'admin/dashboard' => 'pages#dashboard'
+  end
+
+
   get 'home/index'
 
   resources :near_places

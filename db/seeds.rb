@@ -82,3 +82,11 @@ place_sports = [
 place_sports.each do |place_sport|
    PlaceSport.create!(place_sport)
 end
+
+users = [{:name => 'Rubén Aguirre Jirafales',:email => 'user@nivelr.com',:password => "clave12345", :password_confirmation => "clave12345", :user_type => 2, :enable => 'true'},
+         {:name => 'Sr. Pepito Argento',:email => 'admin@nivelr.com', :password => "clave12345", :password_confirmation => "clave12345", :user_type => 1, :enable => 'true'}
+     ]
+
+users.each do |user|
+   User.create!(user)
+end

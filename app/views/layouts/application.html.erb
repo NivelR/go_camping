@@ -27,10 +27,20 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Link1</a></li>
-          <li><a href="#">Link2</a></li>
-          <li><a href="#">Link3</a></li>
-          <li><a href="<%= rails_admin_path %>">Admin</a></li>
+          <!-- Admin -->
+          <% if user_signed_in?  %>
+            <% if current_user.is_admin?  %>
+              <li><a href="<%= rails_admin_path %>">Admin</a></li>
+            <% end %>
+          <% end %>
+          <!--/Admin -->
+          <!-- Logout -->
+          <% if user_signed_in? %>
+              <li><%= link_to " #{current_user.email}", destroy_user_session_path, :method=>'delete', class: "navbar-link fa fa-user", title: "Cerrar sesión" %></a></li>
+          <% end %> 
+          <!-- //Logout -->
         </ul>
+
         <form class="navbar-form navbar-right">
           <input type="text" class="form-control" placeholder="Country? State?">
            <!-- <button type="submit" class="btn btn-default">Search</button> -->
