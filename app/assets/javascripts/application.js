@@ -17,5 +17,6 @@
 //= require easing
 //= require move-top
 //= require index
+//= require index2
 //= require turbolinks
 //= require_tree .
