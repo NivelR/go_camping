@@ -24,9 +24,9 @@ class NearPlacesController < ApplicationController
   # POST /near_places
   # POST /near_places.json
   def create
-    @place = Place.find(@_params[:near_place][:place_id].to_i)
-    @near_place = @place.near_place.build(near_place_params)
-    #@near_place = NearPlace.new(near_place_params)
+    #@place = Place.find(@_params[:near_place][:place_id].to_i)
+    #@near_place = @place.near_place.build(near_place_params)
+    @near_place = NearPlace.new(near_place_params)
 
     respond_to do |format|
       if @near_place.save
