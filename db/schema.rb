@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108183140) do
+ActiveRecord::Schema.define(version: 20151108183928) do
 
   create_table "near_places", force: :cascade do |t|
     t.boolean  "kiosk"
@@ -89,7 +89,7 @@ ActiveRecord::Schema.define(version: 20151108183140) do
     t.string   "country"
     t.string   "state"
     t.float    "latitude"
-    t.string   "longitude"
+    t.float    "longitude"
     t.string   "feature_image"
     t.boolean  "vacancy"
     t.datetime "created_at",    null: false
