@@ -36,3 +36,13 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
+
+# Ignore other unneeded files.
+database.yml
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
