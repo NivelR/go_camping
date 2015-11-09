@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   after_filter :store_location #Para cuando llega mediante un link.
   before_filter :store_location #Para cuando llega mediante un link.
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
