@@ -1,5 +1,6 @@
 class NearPlacesController < ApplicationController
   before_action :set_near_place, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
 
   # GET /near_places
   # GET /near_places.json

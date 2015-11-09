@@ -1,5 +1,6 @@
 class PlaceSportsController < ApplicationController
   before_action :set_place_sport, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
 
   # GET /place_sports
   # GET /place_sports.json

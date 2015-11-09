@@ -1,5 +1,6 @@
 class PlaceServicesController < ApplicationController
   before_action :set_place_service, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
 
   # GET /place_services
   # GET /place_services.json

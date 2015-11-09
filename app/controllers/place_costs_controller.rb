@@ -1,5 +1,6 @@
 class PlaceCostsController < ApplicationController
   before_action :set_place_cost, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
 
   # GET /place_costs
   # GET /place_costs.json
