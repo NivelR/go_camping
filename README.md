@@ -1,6 +1,6 @@
 ***Rails Rumble App***
 ===
-Repositorio para la edición comunitaria (software libre) de "" 
+Repositorio para la edición comunitaria (software libre) de ""
 una app. para .
 
 Es desarrollada con Ruby on Rails 4.2 y Ruby 2.2.0.
@@ -8,7 +8,7 @@ Es desarrollada con Ruby on Rails 4.2 y Ruby 2.2.0.
 Toda contribución (sugerencias de cambio), consejo, critica constructiva, consultas son bienvenidas.
 
 **Herramientas**.
-  - 
+  -
 
 **Servicios Externos.**
 -----------------------
@@ -26,7 +26,7 @@ Licencia:
     ruby 2.2
 
 * Rails version:
-    rails 4.2.1
+    rails 4.2.5
 
 * System dependencies:
     mirar el archivo gemfile
@@ -102,7 +102,7 @@ Licencia:
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
     Copyright (c) 2015  Matias Mascazzini
-    
+
     Se concede permiso por la presente, de forma gratuita, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados (el "Software"), para utilizar el Software sin restricción, incluyendo sin limitación los derechos de usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender copias de este Software, y para permitir a las personas a las que se les proporcione el Software a hacer lo mismo, sujeto a las siguientes condiciones:
 
     El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.
