@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag params[:controller] %>
 <!-- start-container -->
   <div class="bg">
     <div class="container">
@@ -149,7 +150,7 @@
       <div class="col-md-5 consulation-left">
         <h4>Rent your place to other people</h4>
         <p>It's so easy to register</p>
-        <%= link_to "Register a place", new_place_path, class: "btn btn-success"  %>
+        <%= link_to "Become a host", new_user_registration_path, class: "btn btn-success"  %>
       </div>
 
       <div class="col-md-7 consulation-right">

@@ -1,12 +1,13 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html, body.home{
+html, body{
    font-family: 'Ubuntu', sans-serif;
     font-size: 100%;
     background-color: #FFF;
+    padding: 0px !important;
 }
-body.home a{
+body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
