@@ -23,137 +23,137 @@ RSpec.describe NearPlacesController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # NearPlace. As you add validations to NearPlace, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
-
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+  # let(:valid_attributes) {
+  #   skip("Add a hash of attributes valid for your model")
+  # }
+  #
+  # let(:invalid_attributes) {
+  #   skip("Add a hash of attributes invalid for your model")
+  # }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # NearPlacesController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
-
-  describe "GET #index" do
-    it "assigns all near_places as @near_places" do
-      near_place = NearPlace.create! valid_attributes
-      get :index, {}, valid_session
-      expect(assigns(:near_places)).to eq([near_place])
-    end
-  end
-
-  describe "GET #show" do
-    it "assigns the requested near_place as @near_place" do
-      near_place = NearPlace.create! valid_attributes
-      get :show, {:id => near_place.to_param}, valid_session
-      expect(assigns(:near_place)).to eq(near_place)
-    end
-  end
-
-  describe "GET #new" do
-    it "assigns a new near_place as @near_place" do
-      get :new, {}, valid_session
-      expect(assigns(:near_place)).to be_a_new(NearPlace)
-    end
-  end
-
-  describe "GET #edit" do
-    it "assigns the requested near_place as @near_place" do
-      near_place = NearPlace.create! valid_attributes
-      get :edit, {:id => near_place.to_param}, valid_session
-      expect(assigns(:near_place)).to eq(near_place)
-    end
-  end
-
-  describe "POST #create" do
-    context "with valid params" do
-      it "creates a new NearPlace" do
-        expect {
-          post :create, {:near_place => valid_attributes}, valid_session
-        }.to change(NearPlace, :count).by(1)
-      end
-
-      it "assigns a newly created near_place as @near_place" do
-        post :create, {:near_place => valid_attributes}, valid_session
-        expect(assigns(:near_place)).to be_a(NearPlace)
-        expect(assigns(:near_place)).to be_persisted
-      end
-
-      it "redirects to the created near_place" do
-        post :create, {:near_place => valid_attributes}, valid_session
-        expect(response).to redirect_to(NearPlace.last)
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns a newly created but unsaved near_place as @near_place" do
-        post :create, {:near_place => invalid_attributes}, valid_session
-        expect(assigns(:near_place)).to be_a_new(NearPlace)
-      end
-
-      it "re-renders the 'new' template" do
-        post :create, {:near_place => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
-      end
-    end
-  end
-
-  describe "PUT #update" do
-    context "with valid params" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
-      it "updates the requested near_place" do
-        near_place = NearPlace.create! valid_attributes
-        put :update, {:id => near_place.to_param, :near_place => new_attributes}, valid_session
-        near_place.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "assigns the requested near_place as @near_place" do
-        near_place = NearPlace.create! valid_attributes
-        put :update, {:id => near_place.to_param, :near_place => valid_attributes}, valid_session
-        expect(assigns(:near_place)).to eq(near_place)
-      end
-
-      it "redirects to the near_place" do
-        near_place = NearPlace.create! valid_attributes
-        put :update, {:id => near_place.to_param, :near_place => valid_attributes}, valid_session
-        expect(response).to redirect_to(near_place)
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns the near_place as @near_place" do
-        near_place = NearPlace.create! valid_attributes
-        put :update, {:id => near_place.to_param, :near_place => invalid_attributes}, valid_session
-        expect(assigns(:near_place)).to eq(near_place)
-      end
-
-      it "re-renders the 'edit' template" do
-        near_place = NearPlace.create! valid_attributes
-        put :update, {:id => near_place.to_param, :near_place => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE #destroy" do
-    it "destroys the requested near_place" do
-      near_place = NearPlace.create! valid_attributes
-      expect {
-        delete :destroy, {:id => near_place.to_param}, valid_session
-      }.to change(NearPlace, :count).by(-1)
-    end
-
-    it "redirects to the near_places list" do
-      near_place = NearPlace.create! valid_attributes
-      delete :destroy, {:id => near_place.to_param}, valid_session
-      expect(response).to redirect_to(near_places_url)
-    end
-  end
+  # let(:valid_session) { {} }
+  #
+  # describe "GET #index" do
+  #   it "assigns all near_places as @near_places" do
+  #     near_place = NearPlace.create! valid_attributes
+  #     get :index, {}, valid_session
+  #     expect(assigns(:near_places)).to eq([near_place])
+  #   end
+  # end
+  #
+  # describe "GET #show" do
+  #   it "assigns the requested near_place as @near_place" do
+  #     near_place = NearPlace.create! valid_attributes
+  #     get :show, {:id => near_place.to_param}, valid_session
+  #     expect(assigns(:near_place)).to eq(near_place)
+  #   end
+  # end
+  #
+  # describe "GET #new" do
+  #   it "assigns a new near_place as @near_place" do
+  #     get :new, {}, valid_session
+  #     expect(assigns(:near_place)).to be_a_new(NearPlace)
+  #   end
+  # end
+  #
+  # describe "GET #edit" do
+  #   it "assigns the requested near_place as @near_place" do
+  #     near_place = NearPlace.create! valid_attributes
+  #     get :edit, {:id => near_place.to_param}, valid_session
+  #     expect(assigns(:near_place)).to eq(near_place)
+  #   end
+  # end
+  #
+  # describe "POST #create" do
+  #   context "with valid params" do
+  #     it "creates a new NearPlace" do
+  #       expect {
+  #         post :create, {:near_place => valid_attributes}, valid_session
+  #       }.to change(NearPlace, :count).by(1)
+  #     end
+  #
+  #     it "assigns a newly created near_place as @near_place" do
+  #       post :create, {:near_place => valid_attributes}, valid_session
+  #       expect(assigns(:near_place)).to be_a(NearPlace)
+  #       expect(assigns(:near_place)).to be_persisted
+  #     end
+  #
+  #     it "redirects to the created near_place" do
+  #       post :create, {:near_place => valid_attributes}, valid_session
+  #       expect(response).to redirect_to(NearPlace.last)
+  #     end
+  #   end
+  #
+  #   context "with invalid params" do
+  #     it "assigns a newly created but unsaved near_place as @near_place" do
+  #       post :create, {:near_place => invalid_attributes}, valid_session
+  #       expect(assigns(:near_place)).to be_a_new(NearPlace)
+  #     end
+  #
+  #     it "re-renders the 'new' template" do
+  #       post :create, {:near_place => invalid_attributes}, valid_session
+  #       expect(response).to render_template("new")
+  #     end
+  #   end
+  # end
+  #
+  # describe "PUT #update" do
+  #   context "with valid params" do
+  #     let(:new_attributes) {
+  #       skip("Add a hash of attributes valid for your model")
+  #     }
+  #
+  #     it "updates the requested near_place" do
+  #       near_place = NearPlace.create! valid_attributes
+  #       put :update, {:id => near_place.to_param, :near_place => new_attributes}, valid_session
+  #       near_place.reload
+  #       skip("Add assertions for updated state")
+  #     end
+  #
+  #     it "assigns the requested near_place as @near_place" do
+  #       near_place = NearPlace.create! valid_attributes
+  #       put :update, {:id => near_place.to_param, :near_place => valid_attributes}, valid_session
+  #       expect(assigns(:near_place)).to eq(near_place)
+  #     end
+  #
+  #     it "redirects to the near_place" do
+  #       near_place = NearPlace.create! valid_attributes
+  #       put :update, {:id => near_place.to_param, :near_place => valid_attributes}, valid_session
+  #       expect(response).to redirect_to(near_place)
+  #     end
+  #   end
+  #
+  #   context "with invalid params" do
+  #     it "assigns the near_place as @near_place" do
+  #       near_place = NearPlace.create! valid_attributes
+  #       put :update, {:id => near_place.to_param, :near_place => invalid_attributes}, valid_session
+  #       expect(assigns(:near_place)).to eq(near_place)
+  #     end
+  #
+  #     it "re-renders the 'edit' template" do
+  #       near_place = NearPlace.create! valid_attributes
+  #       put :update, {:id => near_place.to_param, :near_place => invalid_attributes}, valid_session
+  #       expect(response).to render_template("edit")
+  #     end
+  #   end
+  # end
+  #
+  # describe "DELETE #destroy" do
+  #   it "destroys the requested near_place" do
+  #     near_place = NearPlace.create! valid_attributes
+  #     expect {
+  #       delete :destroy, {:id => near_place.to_param}, valid_session
+  #     }.to change(NearPlace, :count).by(-1)
+  #   end
+  #
+  #   it "redirects to the near_places list" do
+  #     near_place = NearPlace.create! valid_attributes
+  #     delete :destroy, {:id => near_place.to_param}, valid_session
+  #     expect(response).to redirect_to(near_places_url)
+  #   end
+  # end
 
 end

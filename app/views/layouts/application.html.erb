@@ -58,16 +58,16 @@
   </nav>
   <!-- //Barra Navegacion -->
 
-  <div class="container-fluid">
-    <div class="row-fluid">
+  <section class="container">
+    <%= render 'layouts/messages' %>
+    <div class="row">
     <!-- Contenido -->
       <div class="col-xs-12 col-sm-8 col-md-9">
-        <%= render 'layouts/messages' %>
         <%= yield %>
       </div>
      <!-- Contenido -->
     </div>
-  </div>
+  </section>
 
   <!-- Para disqus -->
   <script id="dsq-count-scr" src="//gocampingapp.disqus.com/count.js" async></script>

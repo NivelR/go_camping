@@ -23,137 +23,137 @@ RSpec.describe PlaceCostsController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # PlaceCost. As you add validations to PlaceCost, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
-
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+  # let(:valid_attributes) {
+  #   skip("Add a hash of attributes valid for your model")
+  # }
+  #
+  # let(:invalid_attributes) {
+  #   skip("Add a hash of attributes invalid for your model")
+  # }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # PlaceCostsController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
-
-  describe "GET #index" do
-    it "assigns all place_costs as @place_costs" do
-      place_cost = PlaceCost.create! valid_attributes
-      get :index, {}, valid_session
-      expect(assigns(:place_costs)).to eq([place_cost])
-    end
-  end
-
-  describe "GET #show" do
-    it "assigns the requested place_cost as @place_cost" do
-      place_cost = PlaceCost.create! valid_attributes
-      get :show, {:id => place_cost.to_param}, valid_session
-      expect(assigns(:place_cost)).to eq(place_cost)
-    end
-  end
-
-  describe "GET #new" do
-    it "assigns a new place_cost as @place_cost" do
-      get :new, {}, valid_session
-      expect(assigns(:place_cost)).to be_a_new(PlaceCost)
-    end
-  end
-
-  describe "GET #edit" do
-    it "assigns the requested place_cost as @place_cost" do
-      place_cost = PlaceCost.create! valid_attributes
-      get :edit, {:id => place_cost.to_param}, valid_session
-      expect(assigns(:place_cost)).to eq(place_cost)
-    end
-  end
-
-  describe "POST #create" do
-    context "with valid params" do
-      it "creates a new PlaceCost" do
-        expect {
-          post :create, {:place_cost => valid_attributes}, valid_session
-        }.to change(PlaceCost, :count).by(1)
-      end
-
-      it "assigns a newly created place_cost as @place_cost" do
-        post :create, {:place_cost => valid_attributes}, valid_session
-        expect(assigns(:place_cost)).to be_a(PlaceCost)
-        expect(assigns(:place_cost)).to be_persisted
-      end
-
-      it "redirects to the created place_cost" do
-        post :create, {:place_cost => valid_attributes}, valid_session
-        expect(response).to redirect_to(PlaceCost.last)
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns a newly created but unsaved place_cost as @place_cost" do
-        post :create, {:place_cost => invalid_attributes}, valid_session
-        expect(assigns(:place_cost)).to be_a_new(PlaceCost)
-      end
-
-      it "re-renders the 'new' template" do
-        post :create, {:place_cost => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
-      end
-    end
-  end
-
-  describe "PUT #update" do
-    context "with valid params" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
-      it "updates the requested place_cost" do
-        place_cost = PlaceCost.create! valid_attributes
-        put :update, {:id => place_cost.to_param, :place_cost => new_attributes}, valid_session
-        place_cost.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "assigns the requested place_cost as @place_cost" do
-        place_cost = PlaceCost.create! valid_attributes
-        put :update, {:id => place_cost.to_param, :place_cost => valid_attributes}, valid_session
-        expect(assigns(:place_cost)).to eq(place_cost)
-      end
-
-      it "redirects to the place_cost" do
-        place_cost = PlaceCost.create! valid_attributes
-        put :update, {:id => place_cost.to_param, :place_cost => valid_attributes}, valid_session
-        expect(response).to redirect_to(place_cost)
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns the place_cost as @place_cost" do
-        place_cost = PlaceCost.create! valid_attributes
-        put :update, {:id => place_cost.to_param, :place_cost => invalid_attributes}, valid_session
-        expect(assigns(:place_cost)).to eq(place_cost)
-      end
-
-      it "re-renders the 'edit' template" do
-        place_cost = PlaceCost.create! valid_attributes
-        put :update, {:id => place_cost.to_param, :place_cost => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE #destroy" do
-    it "destroys the requested place_cost" do
-      place_cost = PlaceCost.create! valid_attributes
-      expect {
-        delete :destroy, {:id => place_cost.to_param}, valid_session
-      }.to change(PlaceCost, :count).by(-1)
-    end
-
-    it "redirects to the place_costs list" do
-      place_cost = PlaceCost.create! valid_attributes
-      delete :destroy, {:id => place_cost.to_param}, valid_session
-      expect(response).to redirect_to(place_costs_url)
-    end
-  end
+  # let(:valid_session) { {} }
+  #
+  # describe "GET #index" do
+  #   it "assigns all place_costs as @place_costs" do
+  #     place_cost = PlaceCost.create! valid_attributes
+  #     get :index, {}, valid_session
+  #     expect(assigns(:place_costs)).to eq([place_cost])
+  #   end
+  # end
+  #
+  # describe "GET #show" do
+  #   it "assigns the requested place_cost as @place_cost" do
+  #     place_cost = PlaceCost.create! valid_attributes
+  #     get :show, {:id => place_cost.to_param}, valid_session
+  #     expect(assigns(:place_cost)).to eq(place_cost)
+  #   end
+  # end
+  #
+  # describe "GET #new" do
+  #   it "assigns a new place_cost as @place_cost" do
+  #     get :new, {}, valid_session
+  #     expect(assigns(:place_cost)).to be_a_new(PlaceCost)
+  #   end
+  # end
+  #
+  # describe "GET #edit" do
+  #   it "assigns the requested place_cost as @place_cost" do
+  #     place_cost = PlaceCost.create! valid_attributes
+  #     get :edit, {:id => place_cost.to_param}, valid_session
+  #     expect(assigns(:place_cost)).to eq(place_cost)
+  #   end
+  # end
+  #
+  # describe "POST #create" do
+  #   context "with valid params" do
+  #     it "creates a new PlaceCost" do
+  #       expect {
+  #         post :create, {:place_cost => valid_attributes}, valid_session
+  #       }.to change(PlaceCost, :count).by(1)
+  #     end
+  #
+  #     it "assigns a newly created place_cost as @place_cost" do
+  #       post :create, {:place_cost => valid_attributes}, valid_session
+  #       expect(assigns(:place_cost)).to be_a(PlaceCost)
+  #       expect(assigns(:place_cost)).to be_persisted
+  #     end
+  #
+  #     it "redirects to the created place_cost" do
+  #       post :create, {:place_cost => valid_attributes}, valid_session
+  #       expect(response).to redirect_to(PlaceCost.last)
+  #     end
+  #   end
+  #
+  #   context "with invalid params" do
+  #     it "assigns a newly created but unsaved place_cost as @place_cost" do
+  #       post :create, {:place_cost => invalid_attributes}, valid_session
+  #       expect(assigns(:place_cost)).to be_a_new(PlaceCost)
+  #     end
+  #
+  #     it "re-renders the 'new' template" do
+  #       post :create, {:place_cost => invalid_attributes}, valid_session
+  #       expect(response).to render_template("new")
+  #     end
+  #   end
+  # end
+  #
+  # describe "PUT #update" do
+  #   context "with valid params" do
+  #     let(:new_attributes) {
+  #       skip("Add a hash of attributes valid for your model")
+  #     }
+  #
+  #     it "updates the requested place_cost" do
+  #       place_cost = PlaceCost.create! valid_attributes
+  #       put :update, {:id => place_cost.to_param, :place_cost => new_attributes}, valid_session
+  #       place_cost.reload
+  #       skip("Add assertions for updated state")
+  #     end
+  #
+  #     it "assigns the requested place_cost as @place_cost" do
+  #       place_cost = PlaceCost.create! valid_attributes
+  #       put :update, {:id => place_cost.to_param, :place_cost => valid_attributes}, valid_session
+  #       expect(assigns(:place_cost)).to eq(place_cost)
+  #     end
+  #
+  #     it "redirects to the place_cost" do
+  #       place_cost = PlaceCost.create! valid_attributes
+  #       put :update, {:id => place_cost.to_param, :place_cost => valid_attributes}, valid_session
+  #       expect(response).to redirect_to(place_cost)
+  #     end
+  #   end
+  #
+  #   context "with invalid params" do
+  #     it "assigns the place_cost as @place_cost" do
+  #       place_cost = PlaceCost.create! valid_attributes
+  #       put :update, {:id => place_cost.to_param, :place_cost => invalid_attributes}, valid_session
+  #       expect(assigns(:place_cost)).to eq(place_cost)
+  #     end
+  #
+  #     it "re-renders the 'edit' template" do
+  #       place_cost = PlaceCost.create! valid_attributes
+  #       put :update, {:id => place_cost.to_param, :place_cost => invalid_attributes}, valid_session
+  #       expect(response).to render_template("edit")
+  #     end
+  #   end
+  # end
+  #
+  # describe "DELETE #destroy" do
+  #   it "destroys the requested place_cost" do
+  #     place_cost = PlaceCost.create! valid_attributes
+  #     expect {
+  #       delete :destroy, {:id => place_cost.to_param}, valid_session
+  #     }.to change(PlaceCost, :count).by(-1)
+  #   end
+  #
+  #   it "redirects to the place_costs list" do
+  #     place_cost = PlaceCost.create! valid_attributes
+  #     delete :destroy, {:id => place_cost.to_param}, valid_session
+  #     expect(response).to redirect_to(place_costs_url)
+  #   end
+  # end
 
 end
