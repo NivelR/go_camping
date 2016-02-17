@@ -33,7 +33,8 @@ gem 'jquery-turbolinks'
 
 gem 'geocoder'
 
-gem 'devise' #Para registración y autenticación de usuarios.
+#Para registración y autenticación de usuarios.
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password
@@ -54,10 +55,32 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
-  gem "better_errors" #Personaliza los mensajes de error de Rails.
-  gem "binding_of_caller" #Muestra valores de variables de BetterErrors
-  gem 'quiet_assets' #Mejora como se ven los Asset en la consola, cuando ejecutas Rails
+	#Personaliza los mensajes de error de Rails.
+  gem "better_errors"
 
+	#Muestra valores de variables de BetterErrors
+  gem "binding_of_caller"
+
+	#Mejora como se ven los Asset en la consola, cuando ejecutas Rails
+  gem 'quiet_assets'
+
+	#Use pry as your rails console
+	gem 'pry-rails'
+
+	#Adds 'step', 'next', 'finish', 'continue' and 'break' commands
+  gem 'pry-byebug'
+
+	#Walk the stack in a Pry session
+  gem 'pry-stack_explorer'
+
+	#Allows you to wrap code in Pry::rescue{ } to open a pry session
+  gem 'pry-rescue'
+
+	#pretty print Ruby objects to visualize their structure.
+  gem 'awesome_print'
+
+	#Hirb provides a mini view framework for console applications
+  gem 'hirb'
 end
 
 group :test do
