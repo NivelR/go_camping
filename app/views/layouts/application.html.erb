@@ -11,60 +11,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <!-- Barra Navegacion -->
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="<%= places_path %>"><span class="glyphicon glyphicon-tent" aria-hidden="true"> GoCamp!</a>
-        <p class="navbar-text">where you are going to rest?</p>
-      </div>
-
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link1</a></li>
-          <!-- Admin -->
-          <% if user_signed_in?  %>
-            <% if current_user.is_admin?  %>
-              <li><a href="<%= rails_admin_path %>">Admin</a></li>
-            <% end %>
-          <% end %>
-          <!--/Admin -->
-          <!-- Logout -->
-          <% if user_signed_in? %>
-              <li><%= link_to " #{current_user.email}", destroy_user_session_path, :method=>'delete', class: "navbar-link fa fa-user", title: "Cerrar sesión" %></a></li>
-            <% else %>
-              <li><%= link_to " Login", new_user_session_path, class: "navbar-link fa fa-user", title: "Inciar sesión" %></a></li>
-          <% end %>
-          <!-- //Logout -->
-        </ul>
-
-        <%= form_tag places_path, method: :get, class: "navbar-form navbar-right search-form" do %>
-          <%= text_field_tag(
-              :search,
-              params[:search],
-              placeholder: "Search by country",
-              class: "form-control"
-          ) %>
-        <% end %>
-
-      </div>
-    </div>
-  </nav>
-  <!-- //Barra Navegacion -->
+  <%= render "shared/navigation" %>
 
   <section class="container">
     <%= render 'layouts/messages' %>
     <div class="row">
     <!-- Contenido -->
-      <div class="col-xs-12 col-sm-8 col-md-9">
+      <!-- <div class="col-xs-12 col-sm-8 col-md-9"> -->
         <%= yield %>
-      </div>
+      <!-- </div> -->
      <!-- Contenido -->
     </div>
   </section>

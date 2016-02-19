@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   # A donde va cuando finaliza la sesión.
   def after_sign_out_path_for(resource_or_scope)
     # request.referrer
-    flash[:notice] = "Sesión cerrada."
+    flash[:notice] = "Signed out successfully."
     "/"
   end
 
