@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  resources :users do
+    resources :profiles
+  end
   devise_for :users, :path_prefix => 'my'
-  
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  
+
   scope "/admin" do
     resources :users
   end
@@ -31,7 +34,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   #root 'home#index'
   root to: 'home#index'
-  
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

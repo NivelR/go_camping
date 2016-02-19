@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108224844) do
+ActiveRecord::Schema.define(version: 20160219023356) do
 
   create_table "near_places", force: :cascade do |t|
     t.boolean  "kiosk"
@@ -94,6 +94,13 @@ ActiveRecord::Schema.define(version: 20151108224844) do
     t.boolean  "vacancy"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.text     "bio"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates_presence_of :name
-  
+
+  has_one :profile
+
   def is_admin?
   	self.user_type == 1
   end
