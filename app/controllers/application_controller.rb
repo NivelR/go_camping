@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include Pundit
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   after_filter :store_location #Para cuando llega mediante un link.
   before_filter :store_location #Para cuando llega mediante un link.
   #before_action :authenticate_user!
@@ -48,5 +50,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) do |u|
       u.permit( :name , :email, :type, :enable, :password, :current_password )
     end
+  end
+
+  private
+
+  def user_not_authorized
+    flash[:alert] = 'Access denied.'
+    redirect_to (request.referrer || root_path)
   end
 end

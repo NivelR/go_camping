@@ -45,62 +45,62 @@ RSpec.describe ProfilesController, type: :controller do
   #   end
   # end
 
-  describe "GET #show" do
-    it "assigns the requested profile as @profile" do
-      profile = Profile.create! valid_attributes
-      get :show, {:user_id => user.id, :id =>  profile.to_param}, valid_session
-      expect(assigns(:profile)).to eq(profile)
-    end
-  end
-
-  describe "GET #new" do
-    it "assigns a new profile as @profile" do
-      get :new, {:user_id => user.id}, valid_session
-      expect(assigns(:profile)).to be_a_new(Profile)
-    end
-  end
-
-  describe "GET #edit" do
-    it "assigns the requested profile as @profile" do
-      profile = Profile.create! valid_attributes
-      get :edit, {:user_id => user.id, :id => profile.to_param}, valid_session
-      expect(assigns(:profile)).to eq(profile)
-    end
-  end
-
-  describe "POST #create" do
-    context "with valid params" do
-      it "creates a new Profile" do
-        expect {
-          post :create, {:user_id => user.id, :profile => valid_attributes}, valid_session
-        }.to change(Profile, :count).by(1)
-      end
-
-      it "assigns a newly created profile as @profile" do
-        post :create, {:user_id => user.id, :profile => valid_attributes}, valid_session
-        expect(assigns(:profile)).to be_a(Profile)
-        expect(assigns(:profile)).to be_persisted
-      end
-
-      it "redirects to the created profile" do
-        post :create, {:user_id => user.id, :profile => valid_attributes}, valid_session
-        profile = user.profile
-        expect(response).to redirect_to(user_profile_path(user, profile))
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns a newly created but unsaved profile as @profile" do
-        post :create, {:user_id => user.id, :profile => invalid_attributes}, valid_session
-        expect(assigns(:profile)).to be_a_new(Profile)
-      end
-
-      it "re-renders the 'new' template" do
-        post :create, {:user_id => user.id, :profile => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
-      end
-    end
-  end
+  # describe "GET #show" do
+  #   it "assigns the requested profile as @profile" do
+  #     profile = Profile.create! valid_attributes
+  #     get :show, {:user_id => user.id, :id =>  profile.to_param}, valid_session
+  #     expect(assigns(:profile)).to eq(profile)
+  #   end
+  # end
+  #
+  # describe "GET #new" do
+  #   it "assigns a new profile as @profile" do
+  #     get :new, {:user_id => user.id}, valid_session
+  #     expect(assigns(:profile)).to be_a_new(Profile)
+  #   end
+  # end
+  #
+  # describe "GET #edit" do
+  #   it "assigns the requested profile as @profile" do
+  #     profile = Profile.create! valid_attributes
+  #     get :edit, {:user_id => user.id, :id => profile.to_param}, valid_session
+  #     expect(assigns(:profile)).to eq(profile)
+  #   end
+  # end
+  #
+  # describe "POST #create" do
+  #   context "with valid params" do
+  #     it "creates a new Profile" do
+  #       expect {
+  #         post :create, {:user_id => user.id, :profile => valid_attributes}, valid_session
+  #       }.to change(Profile, :count).by(1)
+  #     end
+  #
+  #     it "assigns a newly created profile as @profile" do
+  #       post :create, {:user_id => user.id, :profile => valid_attributes}, valid_session
+  #       expect(assigns(:profile)).to be_a(Profile)
+  #       expect(assigns(:profile)).to be_persisted
+  #     end
+  #
+  #     it "redirects to the created profile" do
+  #       post :create, {:user_id => user.id, :profile => valid_attributes}, valid_session
+  #       profile = user.profile
+  #       expect(response).to redirect_to(user_profile_path(user, profile))
+  #     end
+  #   end
+  #
+  #   context "with invalid params" do
+  #     it "assigns a newly created but unsaved profile as @profile" do
+  #       post :create, {:user_id => user.id, :profile => invalid_attributes}, valid_session
+  #       expect(assigns(:profile)).to be_a_new(Profile)
+  #     end
+  #
+  #     it "re-renders the 'new' template" do
+  #       post :create, {:user_id => user.id, :profile => invalid_attributes}, valid_session
+  #       expect(response).to render_template("new")
+  #     end
+  #   end
+  # end
 
   # describe "PUT #update" do
   #   context "with valid params" do

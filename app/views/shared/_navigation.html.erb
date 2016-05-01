@@ -14,21 +14,23 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link1</a></li>
-        <!-- Admin -->
         <% if user_signed_in?  %>
+          <!-- Profile and Admin -->
+          <% unless current_user.profile %>
+            <li><%= link_to "New profile", new_user_profile_path(current_user.id) %></li>
+          <% else %>
+            <li><%= link_to "Profile", user_profile_path(current_user.id, current_user.profile) %></li>
+          <% end %>
+
           <% if current_user.is_admin?  %>
             <li><a href="<%= rails_admin_path %>">Admin</a></li>
           <% end %>
+          <!--/Profile and admin -->
+
+          <li><%= link_to "Sign out", destroy_user_session_path, :method=>'delete', class: "navbar-link" %></a></li>
+        <% else %>
+          <li><%= link_to " Login", new_user_session_path, class: "navbar-link fa fa-user", title: "Inciar sesión" %></a></li>
         <% end %>
-        <!--/Admin -->
-        <!-- Logout -->
-        <% if user_signed_in? %>
-            <li><%= link_to "Sign out", destroy_user_session_path, :method=>'delete', class: "navbar-link" %></a></li>
-          <% else %>
-            <li><%= link_to " Login", new_user_session_path, class: "navbar-link fa fa-user", title: "Inciar sesión" %></a></li>
-        <% end %>
-        <!-- //Logout -->
       </ul>
 
       <%= form_tag places_path, method: :get, class: "navbar-form navbar-right search-form" do %>

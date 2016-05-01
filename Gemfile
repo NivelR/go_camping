@@ -35,6 +35,8 @@ gem 'geocoder'
 
 #Para registración y autenticación de usuarios.
 gem 'devise'
+#authorization for Rails applications
+gem 'pundit'
 
 
 # Use ActiveModel has_secure_password
